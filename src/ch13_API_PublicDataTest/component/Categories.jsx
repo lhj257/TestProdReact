@@ -88,9 +88,6 @@ const CategoriesCss = styled(NavLink)`
     margin-left: 1rem;
   }
 `;
-{
-  /* <Categories category={category} onSelect={onSelect} /> */
-}
 //기존 방식
 // const Categories = ({ category, onSelect }) => {
 //   return (

@@ -85,10 +85,6 @@ const ListvirtualizedCss = styled.div`
   }
 `;
 
-// 부모 컴포넌트 TddoList로 부터 전달 받은 속성
-{
-  /* <TodoListItem todo={todo} key={todo.id} /> */
-}
 // todo ={id :1, text="내용", checked : true}
 
 //지우는 기능을 하는 함수를 전달 받아서, 사용하기.

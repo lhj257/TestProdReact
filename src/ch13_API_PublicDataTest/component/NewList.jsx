@@ -22,9 +22,6 @@ const NewListCss = styled.div`
 `;
 
 // 더미 데이터
-{
-  /* <NewList category={category} /> */
-}
 const NewList = ({ category }) => {
   // useEffect 이용해서, 마운트시, 최초 1회 데이터 받아오기.
   // create, update, delete 없어서,
