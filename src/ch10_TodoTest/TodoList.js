@@ -1,30 +1,9 @@
 import React, { useCallback } from "react";
-import styled from "styled-components";
 import TodoListItem from "./TodoListItem";
 
 //페이징 처리 해주는 가상의 리스트 불러오기
 import { List } from "react-virtualized";
-
-//전체 리스트 부분만 css 작업. TodoListCss
-const TodoListCss = styled.div`
-  min-height: 320px;
-  max-height: 513px;
-  overflow-y: auto;
-`;
-
-//부모에서 전달한 props 속성을, 자식 컴포넌트에서 가져오기
-//제거하는 함수를 전달 받아서, 사용하기.
-{
-  /* <TodoList todos={todos} onRemove={onRemove} /> */
-}
-//체크하는 함수를 전달 받아서, 사용하기.
-{
-  /* <TodoList todos={todos} onToggle={onToggle} /> */
-}
 const TodoList = ({ todos, onRemove, onToggle }) => {
-  // react-virtualized 이용해서, 페이징하기, 현재, 리스트 목록부분만의 사이즈 : 512X513(9개 기준)
-  //  하나의 높이를 대략 : 57px 정함(57*9=513)
-  // rowRender, 가상의 행을 나타내는 함수 정의하기.
   const rowRender = useCallback(
     ({ index, key, style }) => {
       const todo = todos[index];
@@ -69,13 +48,6 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
           onToggle={onToggle}
         />
       ))}
-      {/* <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem /> 
-      자식에서, 더미 데이털 직접 만들어서 사용했다면*/}
     </List>
     // </TodoListCss>
   );
